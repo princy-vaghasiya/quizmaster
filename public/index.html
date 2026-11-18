@@ -1,1 +1,76 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizMaster - Online Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <h2>QuizMaster</h2>
+    <p>Test Your Knowledge</p>
+  </header>
+
+  <main class="container">
+
+    <!-- Welcome Screen -->
+    <section id="welcome-screen" class="screen">
+      <div class="icon">🧠</div>
+      <h1>Welcome to QuizMaster!</h1>
+      <p>Challenge yourself and test your knowledge.</p>
+
+      <input
+        type="text"
+        id="player-name"
+        placeholder="Enter your name"
+        maxlength="50"
+      >
+
+      <button id="start-btn">Start Quiz</button>
+
+      <p class="info">5 Questions | Multiple Choice | Instant Result</p>
+    </section>
+
+    <!-- Quiz Screen -->
+    <section id="quiz-screen" class="screen hidden">
+      <div class="quiz-top">
+        <span id="question-number">Question 1 of 5</span>
+        <span id="progress-text">0%</span>
+      </div>
+
+      <div class="progress-bar">
+        <div id="progress-fill"></div>
+      </div>
+
+      <h2 id="question-text"></h2>
+
+      <div id="options-container"></div>
+
+      <button id="next-btn" disabled>Next Question</button>
+    </section>
+
+    <!-- Result Screen -->
+    <section id="result-screen" class="screen hidden">
+      <div class="icon">🏆</div>
+      <h1>Quiz Completed!</h1>
+      <p id="result-message"></p>
+      <div class="score-box">
+        <h2 id="score-text">0 / 5</h2>
+        <p>Your Score</p>
+      </div>
+      <p id="save-status"></p>
+      <button id="restart-btn">Try Again</button>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 QuizMaster | Online Quiz Application</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
